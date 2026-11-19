@@ -1,4 +1,4 @@
-# Sat House Desing
+# Sat House Design
 
 > Transformando idéias em  impacto visual.
 
@@ -13,4 +13,4 @@ empresas a terem uma presença digital profissional.
 ## Equipe
 - **Luís Henrique de Souza Anania** — Desenvolvedor Front-end e Web Designer EO
 - **Luís Eduardo dos Santos Miranda** — Desenvolvedor Back-end Administrador de Banco de Dados
-- **Silvio Santos Farmy Aura** — DevOps e arquiteto de Software. 
+- **Silvio Santos Farmy Aura** — DevOps e arquiteto de Software.
