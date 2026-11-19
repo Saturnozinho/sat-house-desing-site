@@ -1,62 +1,36 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | Sat House Design</title>
-	</head>
-	<body>
-		<header>
-			<strong>Sat House Design</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../Layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Sobre a Sat House Design</h1>
-				<p>A Sat House Design surgiu com o objetivo de criar layouts modernos e funcionais para sites. A empresa une criatividade e tecnologia para desenvolver páginas bonitas, organizadas e fáceis de usar. O nome “Sat House” representa um espaço de criação e ideias, enquanto “Design” representa o foco da empresa no desenvolvimento visual de sites. A Sat House Design busca ajudar empresas e empreendedores a terem uma presença digital profissional e atrativa.</p>
-			</section>
+<LayoutBase 
+	titulo="Sobre Nós" 
+	descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+	<section>
+		<h1>Sobre a {empresa.nome}</h1>
+		<p>{empresa.historia}</p>
+	</section>
 
-			<section>
-				<h2>Missão</h2>
-				<p>Criar layouts modernos, funcionais e atrativos, ajudando empresas a terem uma presença digital profissional.</p>
-			</section>
+	<section>
+		<h2>Missão</h2>
+		<p>{empresa.missao}</p>
+	</section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>Ser reconhecida pela criatividade e qualidade na criação de designs para sites, tornando-se referência no mercado digital.</p>
-			</section>
+	<section>
+		<h2>Visão</h2>
+		<p>{empresa.visao}</p>
+	</section>
 
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Qualidade</h3>
-						<p>Excelência e atenção aos detalhes em cada serviço realizado.</p>
-					</li>
-					<li>
-						<h3>Profissionalismo</h3>
-						<p>Ética, responsabilidade e respeito em tudo o que fazemos.</p>
-					</li>
-					<li>
-						<h3>Criatividade</h3>
-						<p>Inovação e ideias que fazem a diferença.</p>
-                        <h3>Compromisso</h3>
-                        <p>Dedicação e responsabilidade para entregar sempre o melhor resultado.</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 Sat House Design. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Nossos Valores</h2>
+		<ul>
+			{empresa.valores.map((valor) => (
+				<li>
+					<h3>{valor.titulo}</h3>
+					<p>{valor.descricao}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</LayoutBase>
